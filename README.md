@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /
 ---
 
 # 📜 El Códice del Canon Absoluto
