@@ -294,6 +294,122 @@ pre code {
 }
 
 /* ==========================================================================
+   LÍNEA TEMPORAL SAGRADA (TIMELINE AUTOMÁTICA EN CSS / LIQUID)
+   ========================================================================== */
+.sacred-timeline {
+  position: relative;
+  margin: 35px 0 25px 10px;
+  padding-left: 28px;
+  border-left: 2px solid rgba(212, 175, 55, 0.45);
+  box-shadow: -2px 0 10px rgba(212, 175, 55, 0.15);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 10px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -36px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  background: #e5c158;
+  border: 3px solid #0d0d14;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(229, 193, 88, 0.85);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.3);
+  box-shadow: 0 0 18px rgba(229, 193, 88, 1);
+}
+
+.timeline-card {
+  background: rgba(14, 14, 20, 0.88);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 6px;
+  padding: 18px 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-card {
+  border-color: rgba(212, 175, 55, 0.75);
+  transform: translateX(4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.timeline-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #8a1720 0%, #580d12 100%);
+  color: #f7e7c4;
+  font-family: 'Reaver', serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 2px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-epoch {
+  color: #bfaea0;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.timeline-title {
+  font-family: 'Reaver', serif !important;
+  font-size: 20px !important;
+  color: #e5c158 !important;
+  margin: 6px 0 8px 0 !important;
+  text-shadow: 0 0 10px rgba(229, 193, 88, 0.3);
+}
+
+.timeline-desc {
+  color: #ded0b8 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  margin: 0 0 14px 0 !important;
+}
+
+.timeline-btn {
+  display: inline-block;
+  font-family: 'Reaver', serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #f7e7c4 !important;
+  background: rgba(138, 23, 32, 0.25);
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+  border-radius: 4px;
+  padding: 5px 14px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.timeline-btn:hover {
+  background: #8a1720;
+  color: #ffffff !important;
+  border-color: #e5c158 !important;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* ==========================================================================
    PIE DE PÁGINA (FOOTER)
    ========================================================================== */
 #footer_wrap {

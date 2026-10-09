@@ -6,7 +6,7 @@
 
 ## 🌌 La Línea Temporal Sagrada 
 
-A continuación, se despliega el paradigma cronológico de nuestra estirpe. Únicamente los eventos ratificados y exentos de refutación (aprobados mediante *Pull Request* hacia `main`) ostentan el derecho de residir en este índice.
+A continuación, se despliega el paradigma cronológico de nuestra estirpe. Únicamente los eventos ratificados y exentos de refutación (aprobados mediante *Pull Request* hacia `Sagrada_linea_del_el_Tiempo`) ostentan el derecho de residir en este índice.
 
 ```mermaid
 timeline
@@ -14,4 +14,4 @@ timeline
     2024 : La Convergencia : El primer encuentro de las entidades.
     2025 : El Cisma del Servidor Moddeado : La gran caída y purga de los chunks.
     2026 : El Advenimiento : Reestructuración del grupo y nuevas alianzas.
-    ```
+```
