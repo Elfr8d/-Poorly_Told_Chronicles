@@ -3,7 +3,15 @@ layout: default
 permalink: /
 ---
 
-# 📜 El Códice del Canon Absoluto
+<div class="hero-stage">
+  <div class="hero-title-wrapper">
+    <img src="{{ '/assets/images/Crónicas urbanas en letras retro.png' | relative_url }}" alt="Crónicas Urbanas" class="hero-title-img">
+  </div>
+  <div class="deadlock-tape-badge">EL CÓDICE DEL CANON ABSOLUTO</div>
+  <div class="hero-portraits-banner">
+    <img src="{{ '/assets/images/header_portraits.webp' | relative_url }}" alt="Deadlock Heroes" class="hero-portraits-img">
+  </div>
+</div>
 
 > *"A este espacio se le confiere la ineludible y excelsa prerrogativa de fungir como depositario arcano de nuestra exégesis colectiva. En sus entrañas inmateriales convergen las vicisitudes más trascendentales y los hitos inefables de nuestra cofradía, transmutando la vacuidad de lo efímero en un canon imperecedero. Constituye, en suma, el baluarte cronístico donde la arquitectura de nuestras vivencias elude el inexorable y ruinoso devenir del tiempo."*
 

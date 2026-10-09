@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.titulo | default: site.title }} - {{ site.description }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% include head-custom.html %}
+</head>
+<body>
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR ESTILO DEADLOCK -->
+  <header id="header_wrap">
+    <div class="top-nav-bar">
+      <a href="{{ '/' | relative_url }}" class="deadlock-nav-brand">
+        <img src="{{ '/assets/images/deadlock_logo_dark.svg' | relative_url }}" alt="Deadlock Logo" class="deadlock-logo-img">
+        <span class="deadlock-repo-name">{{ site.title }}</span>
+      </a>
+      <a href="https://github.com/Elfr8d/-Poorly_Told_Chronicles" target="_blank" rel="noopener noreferrer" class="deadlock-btn-github">
+        Ver en GitHub ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main id="main_content_wrap">
+    <div id="main_content">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA ESTILO DEADLOCK -->
+  <footer id="footer_wrap">
+    <p class="copyright">El Códice del Canon Absoluto • Archivo Multiversal</p>
+    <p class="branch-tag">Rama Sagrada: <code>Sagrada_linea_del_el_Tiempo</code></p>
+  </footer>
+</body>
+</html>
