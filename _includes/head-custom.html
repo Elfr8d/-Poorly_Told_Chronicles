@@ -1,0 +1,41 @@
+<!-- Soporte para Diagramas Mermaid con Estética Deadlock Noir / Oro -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        background: '#0d0d14',
+        primaryColor: '#1e1c2b',
+        primaryTextColor: '#f5edd7',
+        primaryBorderColor: '#d4af37',
+        lineColor: '#d4af37',
+        secondaryColor: '#281a2e',
+        tertiaryColor: '#151322',
+        timelineEventColor: '#d4af37',
+        timelineSectionColor: '#1e1c2b',
+        fontFamily: 'Reaver, Georgia, serif'
+      }
+    });
+
+    const codeBlocks = document.querySelectorAll('pre code.language-mermaid');
+    codeBlocks.forEach((block) => {
+      const pre = block.parentElement;
+      const container = document.createElement('div');
+      container.className = 'mermaid';
+      container.textContent = block.textContent.trim();
+      pre.parentNode.replaceChild(container, pre);
+    });
+
+    try {
+      await mermaid.run({
+        querySelector: '.mermaid'
+      });
+    } catch (e) {
+      console.error('Mermaid render error:', e);
+    }
+  });
+</script>

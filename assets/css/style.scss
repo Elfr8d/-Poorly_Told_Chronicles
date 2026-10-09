@@ -2,31 +2,328 @@
 ---
 @import "{{ site.theme }}";
 
-/* Estilo Noir / Aristócrata inspirado en estética Deadlock */
+/* ==========================================================================
+   TIPOGRAFÍA OFICIAL DE DEADLOCK: REAVER
+   ========================================================================== */
+@font-face {
+  font-family: 'Reaver';
+  src: url('../fonts/reaver-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Reaver';
+  src: url('../fonts/reaver-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Reaver';
+  src: url('../fonts/reaver-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   ESTRUCTURA Y LIENZO PRINCIPAL (NOIR / ARISTÓCRATA DEADLOCK)
+   ========================================================================== */
 body {
-    background-color: #0d0d12 !important; /* Fondo casi negro, noche oscura */
-    color: #e0c9a3 !important; /* Texto color pergamino/bronce claro */
-    font-family: "Georgia", "Palatino Linotype", serif !important; /* Letra de máquina de escribir antigua o novela */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b10 !important;
+  background-image: 
+    radial-gradient(circle at 50% 120px, rgba(14, 14, 22, 0.72) 0%, rgba(8, 8, 12, 0.95) 80%),
+    url('../images/Background_Gothic.jpeg') !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  color: #e0d0b5 !important;
+  font-family: 'Reaver', 'Georgia', 'Palatino Linotype', serif !important;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
-    color: #d4af37 !important; /* Dorado aristócrata para los títulos */
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-    font-weight: normal;
+/* ==========================================================================
+   ENCABEZADO (HEADER)
+   ========================================================================== */
+#header_wrap {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+  position: relative;
+  overflow: hidden;
 }
 
-/* El bloque donde va el texto del "Códice" */
+#header_wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(8, 8, 12, 0.92) 0%, rgba(11, 11, 16, 0.75) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#header_wrap .inner {
+  position: relative;
+  z-index: 2;
+  padding: 55px 20px 45px 20px !important;
+  max-width: 840px !important;
+  text-align: center;
+}
+
+#project_title {
+  font-family: 'Reaver', serif !important;
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase;
+  color: #e5c158 !important;
+  text-shadow: 0 0 25px rgba(229, 193, 88, 0.4), 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+  margin-bottom: 10px !important;
+}
+
+#project_tagline {
+  font-family: 'Reaver', serif !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #bfaea0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Botón "View on GitHub" con sello Carmesí y Oro */
+#forkme_banner {
+  background: linear-gradient(135deg, #8a1720 0%, #580d12 100%) !important;
+  border-bottom: 2px solid #d4af37 !important;
+  border-left: 2px solid #d4af37 !important;
+  color: #f7e7c4 !important;
+  font-family: 'Reaver', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  padding: 10px 42px 10px 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), 0 0 12px rgba(138, 23, 32, 0.6) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+#forkme_banner:hover {
+  background: linear-gradient(135deg, #ad1d28 0%, #751119 100%) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45), 0 0 18px rgba(173, 29, 40, 0.8) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transform: translateY(2px);
+}
+
+/* ==========================================================================
+   CONTENEDOR DEL CÓDICE (#main_content_wrap y #main_content)
+   ========================================================================== */
+#main_content_wrap {
+  background: transparent !important; /* Elimina completamente el fondo gris/blanco de Slate */
+  border: none !important;
+  padding: 45px 0 65px 0 !important;
+}
+
 #main_content {
-    background-color: #1a1a24;
-    border: 1px solid #d4af37;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Resplandor dorado sutil */
+  background-color: rgba(16, 16, 23, 0.94) !important;
+  max-width: 840px !important;
+  padding: 45px 50px !important;
+  border: 1px solid rgba(212, 175, 55, 0.45) !important;
+  border-radius: 6px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.85),
+    0 0 25px rgba(212, 175, 55, 0.12),
+    inset 0 0 50px rgba(0, 0, 0, 0.65) !important;
+  position: relative;
+  backdrop-filter: blur(12px);
 }
 
-/* Enlaces (los links a las historias) */
-a {
-    color: #b22222 !important; /* Rojo carmesí para los enlaces */
-    text-decoration: none;
+/* Filamentos dorados ornamentales */
+#main_content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.8), transparent);
 }
+
+#main_content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.8), transparent);
+}
+
+/* ==========================================================================
+   TIPOGRAFÍA Y CONTENIDO
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Reaver', serif !important;
+  color: #e5c158 !important;
+  text-shadow: 0 0 15px rgba(229, 193, 88, 0.35), 2px 2px 4px rgba(0, 0, 0, 0.9) !important;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 32px !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding-bottom: 14px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 25px !important;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.25);
+  padding-bottom: 10px;
+  margin-top: 38px;
+  margin-bottom: 20px;
+  background: none !important; /* Desactiva la línea repetitiva por defecto de Slate */
+}
+
+p {
+  margin: 14px 0 20px 0 !important;
+  color: #ded0b8;
+  font-size: 16.5px;
+  line-height: 1.8;
+}
+
+/* Cita arcana / Pergamino sagrado */
+blockquote {
+  position: relative;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(138, 23, 32, 0.05) 100%) !important;
+  border-left: 3px solid #d4af37 !important;
+  border-radius: 0 6px 6px 0;
+  padding: 22px 28px !important;
+  margin: 28px 0 !important;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 25px rgba(0, 0, 0, 0.35) !important;
+}
+
+blockquote p {
+  color: #f7edd7 !important; /* Tono pergamino radiante de alta legibilidad */
+  font-size: 18px !important;
+  font-style: italic;
+  line-height: 1.85 !important;
+  margin: 0 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* Separadores */
+hr {
+  height: 1px;
+  border: none;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent) !important;
+  margin: 35px 0;
+}
+
+/* Enlaces (Carmesí & Oro) */
+a {
+  color: #d94b4b !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted rgba(217, 75, 75, 0.5);
+  transition: all 0.25s ease;
+}
+
 a:hover {
-    color: #d4af37 !important; /* Brillan en dorado al pasar el mouse */
+  color: #f5cf64 !important;
+  border-bottom-color: #f5cf64;
+  text-shadow: 0 0 10px rgba(245, 207, 100, 0.6);
+}
+
+/* Código y Pre (En caso de no renderizar Mermaid o código regular) */
+pre, code {
+  font-family: 'Courier New', Courier, monospace !important;
+  background-color: #0c0c12 !important;
+  color: #e5c158 !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+}
+
+code {
+  padding: 2px 6px !important;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 20px 24px !important;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 12px rgba(0, 0, 0, 0.4) !important;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+
+pre code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   ESTILOS PARA DIAGRAMAS MERMAID
+   ========================================================================== */
+.mermaid {
+  text-align: center;
+  margin: 30px 0;
+  padding: 25px 15px;
+  background: rgba(10, 10, 16, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+}
+
+.mermaid text, .mermaid tspan {
+  fill: #f7edd7 !important;
+  font-family: 'Reaver', Georgia, serif !important;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+#footer_wrap {
+  background: transparent !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.2) !important;
+  padding: 35px 0 !important;
+  text-align: center;
+}
+
+#footer_wrap p {
+  color: #8c8172 !important;
+  font-size: 14px;
+}
+
+#footer_wrap a {
+  color: #d4af37 !important;
+  border-bottom: none;
+}
+
+#footer_wrap a:hover {
+  color: #ffffff !important;
+}
+
+/* Ajustes Responsivos */
+@media screen and (max-width: 860px) {
+  #main_content {
+    margin: 0 15px;
+    padding: 30px 25px !important;
+  }
+  #project_title {
+    font-size: 30px !important;
+  }
 }
