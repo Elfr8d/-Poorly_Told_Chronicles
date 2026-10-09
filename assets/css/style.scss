@@ -1,0 +1,32 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* Estilo Noir / Aristócrata inspirado en estética Deadlock */
+body {
+    background-color: #0d0d12 !important; /* Fondo casi negro, noche oscura */
+    color: #e0c9a3 !important; /* Texto color pergamino/bronce claro */
+    font-family: "Georgia", "Palatino Linotype", serif !important; /* Letra de máquina de escribir antigua o novela */
+}
+
+h1, h2, h3, h4 {
+    color: #d4af37 !important; /* Dorado aristócrata para los títulos */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    font-weight: normal;
+}
+
+/* El bloque donde va el texto del "Códice" */
+#main_content {
+    background-color: #1a1a24;
+    border: 1px solid #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Resplandor dorado sutil */
+}
+
+/* Enlaces (los links a las historias) */
+a {
+    color: #b22222 !important; /* Rojo carmesí para los enlaces */
+    text-decoration: none;
+}
+a:hover {
+    color: #d4af37 !important; /* Brillan en dorado al pasar el mouse */
+}

@@ -14,3 +14,4 @@ timeline
     2024 : La Convergencia : El primer encuentro de las entidades.
     2025 : El Cisma del Servidor Moddeado : La gran caída y purga de los chunks.
     2026 : El Advenimiento : Reestructuración del grupo y nuevas alianzas.
+    ```
