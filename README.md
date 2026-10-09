@@ -9,7 +9,7 @@ permalink: /
   </div>
   <div class="deadlock-tape-badge">EL CÓDICE DEL CANON ABSOLUTO</div>
   <div class="hero-portraits-banner">
-    <img src="{{ '/assets/images/header_portraits.webp' | relative_url }}" alt="Deadlock Heroes" class="hero-portraits-img">
+    <img src="{{ '/assets/images/Seis siluetas misteriosas con gestos elegantes.png' | relative_url }}" alt="Seis Siluetas Misteriosas" class="hero-portraits-img">
   </div>
 </div>
 

@@ -169,18 +169,21 @@ body {
 
 .hero-portraits-banner {
   width: 100%;
-  max-width: 840px;
+  max-width: 860px;
   margin: 10px auto 25px auto;
-  border-radius: 4px;
-  overflow: hidden;
-  border: 1px solid rgba(221, 102, 56, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  position: relative;
 }
 
 .hero-portraits-img {
   width: 100%;
   display: block;
-  filter: contrast(1.05) brightness(0.9);
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 20px rgba(221, 102, 56, 0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-portraits-img:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 1)) drop-shadow(0 0 30px rgba(221, 102, 56, 0.4));
 }
 
 /* ==========================================================================
